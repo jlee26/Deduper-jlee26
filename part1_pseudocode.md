@@ -14,12 +14,12 @@ Build a code (python) to remove reference-based PCR duplicates. The data will be
 ### Input and Output Files (Examples)
 The deduper code will take raw .sam file (contains PCR duplicates) and output a .sam file with a single copy of each read.
 
-Input:
+Input:\
 Expected output:
 
 ### Developing an Algorithm (Pseudocode)
 1. Use command line to sort by chromosome number (RNAME, SAM col 3), and pipeline to a new file.
-2. In python, call the function (umi_organizer) and read in STL96.txt (creates a dictionary (dict_umi with all UMIs)
+2. In python, call the function (umi_organizer) and read in STL96.txt (creates a dictionary (dict_umi) with all UMIs)
 3. Initialize dictionary (dict_info) to store chromosome, start position, and strand specificity. (Key: chrom,pos,strand,umi; value: .sam line currently reading)
 4. Use python to open a new file and write to output.sam.
 5. Use python to open and read the sorted .sam file (from #1).
