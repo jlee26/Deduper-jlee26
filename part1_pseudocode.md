@@ -1,8 +1,8 @@
 
 # Deduper
 ## Part 1: Pseudocode
-Juyoung Lee
-BI 624
+Juyoung Lee\
+BI 624\
 10/15/21
 
 ### Problem
@@ -45,15 +45,15 @@ Expected output:
 
 ### Functions
 1. umi_organizer
-  - Description: Takes in a text file that contains a list of UMIs and returns a dictionary with all the UMIs.
-  - Input: .txt with a list of 1 UMIs per row.
-  - Output: A dictionary (dict_umi) with key (0:96) and values (umi's).
-  - Pseudocode:
-      1. Initalize dictionary (dict_umi).
-      2. Read file.
-      3. Create variable (line) and store in each line of the file.
-      4. Append to dict_umi (key: 0:96; value: line)
-      5. Return dict_umi
+    - Description: Takes in a text file that contains a list of UMIs and returns a dictionary with all the UMIs.
+    - Input: .txt with a list of 1 UMIs per row.
+    - Output: A dictionary (dict_umi) with key (0:96) and values (umi's).
+    - Pseudocode:
+        1. Initalize dictionary (dict_umi).
+        2. Read file.
+        3. Create variable (line) and store in each line of the file.
+        4. Append to dict_umi (key: 0:96; value: line)
+        5. Return dict_umi
 2. strand_specificity
     - Description: Takes in a bit number and returns a string of either + (for positive direction strand) or - (for negative direction strand) 
     - Input: bit number
