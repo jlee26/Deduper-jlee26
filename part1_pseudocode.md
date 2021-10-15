@@ -6,15 +6,15 @@ BI 624\
 10/15/21
 
 ### Problem
-Amplification is part of the Illumina sequencing process to sequence the reads. During amplification, some strands can be  When running Illumina When sequencing libraries for RNA-seq, PCR duplicates are sequenced. PCR duplicates can cause inaccurate downstream analysis, including for RNA-seq, transcriptomics, differential expression, or genome assembly.
+PCR amplification is part of the Illumina sequencing process to sequence the reads. This step is important, as it helps create multiple fragments with adapters for sequencing. However, this step can create some strands to be overrepresented and creating PCR duplicates. These overrepresented strands, or PCR duplicates, can be sequenced, resulting in duplicate reads from the same cDNA. PCR duplicates can cause inaccurate downstream analysis, including RNA-seq, transcriptomics, differential expression, or genome assembly.
 
 ### Objective
-Build a code (python) to remove reference-based PCR duplicates. The data will be a single-end reads with 96 UMIs. The code will account for the same chromosome, start position, and strand specificity. It will also account for UMI's and soft clipping to remove any duplicates.
+Build a code to remove reference-based PCR duplicates. The data will be a single-end reads with 96 UMIs. The code will account for the same chromosome, start position, and strand specificity. It will also account for UMIs and soft clipping to remove any duplicates.
 
 ### Input and Output Files (Examples)
-The deduper code will take raw .sam file (contains PCR duplicates) and output a .sam file with a single copy of each read.
+The deduper code will take a sorted .sam file (contains PCR duplicates and sorted by chromosome number) and output a .sam file with a single copy of each read.
 
-Input:\
+Input: \
 Expected output:
 
 ### Developing an Algorithm (Pseudocode)
@@ -39,7 +39,7 @@ Expected output:
             - dict_info (Key: chrom,pos,strand,umi; Value: line)
         - else, don't add to dictionary. #NOTE: this will only keep the first occurance of the read. For challenge, I could keep the read that has a higher quality?
 12. Repeat for each row.
-13. After running through the .sam file, write to new output.sam file by taking the values of dict_info.
+13. After running through the .sam file, write to new output.sam file by taking the values of dict_info using for loop.
 14. Close all files.
 
 
