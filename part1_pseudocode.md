@@ -6,7 +6,7 @@ BI 624\
 10/15/21
 
 ### Problem
-PCR amplification is part of the Illumina sequencing process to sequence the reads. This step is important, as it helps create multiple fragments with adapters for sequencing. However, this step can create some strands to be overrepresented and creating PCR duplicates. These overrepresented strands, or PCR duplicates, can be sequenced, resulting in duplicate reads from the same cDNA. PCR duplicates can cause inaccurate downstream analysis, including RNA-seq, transcriptomics, differential expression, or genome assembly.
+PCR amplification is part of the Illumina sequencing process to sequence the reads. This step is important, as it helps create multiple fragments with adapters for sequencing, however, this step can create some strands to be overrepresented. These overrepresented strands, or PCR duplicates, can be sequenced, resulting in duplicate reads from the same cDNA. PCR duplicates can cause inaccurate downstream analysis, including RNA-seq, transcriptomics, differential expression, or genome assembly.
 
 ### Objective
 Build a code to remove reference-based PCR duplicates. The data will be a single-end reads with 96 UMIs. The code will account for the same chromosome, start position, and strand specificity. It will also account for UMIs and soft clipping to remove any duplicates.
