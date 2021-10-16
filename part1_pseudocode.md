@@ -12,7 +12,9 @@ PCR amplification is part of the Illumina sequencing process to sequence the rea
 Build a code to remove reference-based PCR duplicates. The data will be a single-end reads with 96 UMIs. The code will account for the same chromosome, start position, and strand specificity. It will also account for UMIs and soft clipping to remove any duplicates.
 
 ### Input and Output Files (Examples)
-The deduper code will take a sorted .sam file (contains PCR duplicates and sorted by chromosome number) and output a .sam file with a single copy of each read.\
+The deduper code will take a sorted .sam file using the following command:
+``` samtools sort <file_name.sam> -o sort.sam ```
+The deduper code will output a .sam file with a single copy of each read.\
 \
 Input: sort.sam\
 Expected output: output.sam
