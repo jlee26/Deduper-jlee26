@@ -46,21 +46,29 @@ Expected output: output.sam
 
 
 ### Functions
-1. umi_organizer
-    - Description: Takes in a text file that contains a list of UMIs and returns a dictionary with all the UMIs.
-    - Input: .txt with a list of 1 UMIs per row.
-    - Output: A dictionary (dict_umi) with key (0:96) and values (umi's).
+1. Function Header: def umi_organizer(tf):
+    - Description: Takes in a text file with a list of 1 UMIs per row and returns a dictionary, dict_umi, with all the UMIs as values.
+    - Input: test.txt
+        AAAAA
+        TTTTT
+        GGGGG
+        CCCCC
+    - Output:
+        {1:'AAAAA',
+        2:'TTTTT',
+        3:'GGGGG',
+        4:'CCCCC'}
     - Pseudocode:
         1. Initalize dictionary (dict_umi).
         2. Read file.
         3. Create variable (line) and store in each line of the file.
         4. Append to dict_umi (key: 0:96; value: line)
         5. Return dict_umi
-2. strand_specificity
-    - Description: Takes in a decimal number and returns a string of either + (for positive direction strand) or - (for negative direction strand) 
-    - Input: decimal number
-    - Output: "+" or "-"
+2. Function Header: def strand_specificity(num):
+    - Description: Takes in a decimal number and determines if the bit 16 is True(1) or False(0). If True(1), sequence is reverse complemented, therefore returns a string "-". If False(0), sequence is not reverse complemented, thereefore returns a string "+". 
+    - Input: 89
+    - Output: "-"
     - Pseudocode:
         1. Takes in decimal number.
-        2. If the binary number 16 is set to 1 (aka True), return a variable (strand) as -
-        3. Else: return a variable (strand) as +
+        2. If the binary number 16 is set to 1 (aka True), return variable (strand) as -
+        3. Else: return variable (strand) as +
