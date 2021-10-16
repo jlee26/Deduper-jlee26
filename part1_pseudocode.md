@@ -31,7 +31,7 @@ Expected output: output.sam
     - If the *first letter* we see in the CIGAR (col 6) contains a letter 'S', create a variable (s) and store the number before the letter 'S' (use regex).
         - Create a new variable (pos) and store start position (col 4) - S
     - If no 'S' is present (at the first letter), create a variable (pos) and store start position (col 4).
-9. Call a function (strand_specificity) and input the bit number (col 2). (Returns a + or - in a variable (strand)).
+9. Call a function (strand_specificity) and input the decimal number (col 2). (Returns a + or - in a variable (strand)).
 10. Create a local variable (umi) and store the last 8 characters of QNAME (col 1).
 11. Create an if statement (to append to the dictionary (dict_info)):
     - If chrom,pos,strand,umi does NOT exist in dict_info AND umi exists in dict_umi , then append to:
@@ -57,10 +57,10 @@ Expected output: output.sam
         4. Append to dict_umi (key: 0:96; value: line)
         5. Return dict_umi
 2. strand_specificity
-    - Description: Takes in a bit number and returns a string of either + (for positive direction strand) or - (for negative direction strand) 
-    - Input: bit number
+    - Description: Takes in a decimal number and returns a string of either + (for positive direction strand) or - (for negative direction strand) 
+    - Input: decimal number
     - Output: "+" or "-"
     - Pseudocode:
-        1. Takes in bit number.
-        2. If bit number 16 is set to 1 (aka True), return a variable (strand) as -
+        1. Takes in decimal number.
+        2. If the binary number 16 is set to 1 (aka True), return a variable (strand) as -
         3. Else: return a variable (strand) as +
