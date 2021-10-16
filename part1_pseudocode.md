@@ -48,15 +48,15 @@ Expected output: output.sam
 ### Functions
 1. Function Header: def umi_organizer(tf):
     - Description: Takes in a text file with a list of 1 UMIs per row and returns a dictionary, dict_umi, with all the UMIs as values.
-    - Input: test.txt
-        AAAAA
-        TTTTT
-        GGGGG
+    - Input: test.txt\
+        AAAAA\
+        TTTTT\
+        GGGGG\
         CCCCC
-    - Output:
-        {1:'AAAAA',
-        2:'TTTTT',
-        3:'GGGGG',
+    - Output:\
+        {1:'AAAAA',\
+        2:'TTTTT',\
+        3:'GGGGG',\
         4:'CCCCC'}
     - Pseudocode:
         1. Initalize dictionary (dict_umi).
