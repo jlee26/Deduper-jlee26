@@ -54,10 +54,10 @@ Expected output: output.sam
         GGGGG\
         CCCCC
     - Output:\
-        {1:'AAAAA',\
-        2:'TTTTT',\
-        3:'GGGGG',\
-        4:'CCCCC'}
+        {0:'AAAAA',\
+        1:'TTTTT',\
+        2:'GGGGG',\
+        3:'CCCCC'}
     - Pseudocode:
         1. Initalize dictionary (dict_umi).
         2. Read file.
