@@ -14,7 +14,7 @@ output: PCR duplicate-free .sam file called output_deduped.sam
 ## Assignment
 File: ./dedup_16562176.out contains information of the output_deduped.sam file, including number of unique reads, number of wrong UMIs, number of reads removed due to duplication, and number of unique reads for each chromosome.<br/>
 <br/>
-.sam file was provided by our instructor, found on talapas:
+.sam file was provided by our instructor, found on talapas:<br/>
 /projects/bgmp/shared/deduper/C1_SE_uniqAlign.sam <br/>
 <br/>
 This file was sorted and deduped using ./wrapper_deduper.sh <br/>
