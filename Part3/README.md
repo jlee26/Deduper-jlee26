@@ -17,7 +17,7 @@ File: ./dedup_16562176.out contains information of the output_deduped.sam file, 
 .sam file was provided by our instructor, found on talapas:<br/>
 /projects/bgmp/shared/deduper/C1_SE_uniqAlign.sam <br/>
 <br/>
-This file was sorted and deduped using ./wrapper_deduper.sh <br/>
+This file was sorted and deduped using sbatch ./wrapper_deduper.sh <br/>
 <br/>
 The output_deduped.sam file is found on talapas:<br/>
 /projects/bgmp/jlee26/bioinformatics/Bi624/Deduper-jlee26/Part3/output_deduped.sam
